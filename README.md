@@ -8,16 +8,16 @@ To add the plugin to Nutch, download the plugin and copy to Nutch_Home/src/plugi
 
 2.	In the Nutch conf directory, find nutch-site.xml file and add the imagesearch plugin under <name>plugin.includes</name>. It should look something like this. 
      
-     <property>
-        <name>plugin.includes</name>
-        <value>protocol-http|urlfilter-regex|parse-(html|tika|metatags)|urlnormalizer-(pass|regex|basic)|imagesearch</value>
-     </property>
+          <property>
+             <name>plugin.includes</name>
+             <value>protocol-http|urlfilter-regex|parse-(html|tika|metatags)|urlnormalizer-(pass|regex|basic)|imagesearch</value>
+          </property>
 
 3.	In the nutch-site.xml file, you need to provide a query for the search. Add something like the following. 
 
-     <property>
-          <name>keywords</name>
-          <value>keyword1,keyword2,keyword3</value>
-     </property>
+          <property>
+               <name>keywords</name>
+               <value>keyword1,keyword2,keyword3</value>
+          </property>
 
 The code can be modified to search images for several categories at the same time. The text data that is used for searching images includes only image name, title and alt text etc. This could be modified to add headings text, paragraphs and other text data however this can significantly increase the noise ratio. 
