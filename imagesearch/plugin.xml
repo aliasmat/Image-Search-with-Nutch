@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin id = "imagesearch" 
+        name = "Search  Images"
+        version = "1.0" 
+        provider-name = "Asmat Ali">
+
+   <runtime>
+     <library name = "ImageSearch.jar">
+      <export name = "*"/>
+     </library>
+   </runtime>
+
+     <requires>
+          <import plugin="nutch-extensionpoints"/>
+      </requires>
+   
+   <extension id = "org.apache.nutch.parse.imagesearch"
+              name = "Search Images"
+              point = "org.apache.nutch.parse.HtmlParseFilter">
+              
+              <implementation id = "Image Search" 
+              class = "org.apache.nutch.parse.imagesearch.ImageSearch" >
+              </implementation>
+   </extension>
+
+</plugin>
