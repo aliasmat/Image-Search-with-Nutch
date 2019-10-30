@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+
+<!-- Configuration overrides used during unit tests. -->
+
+<configuration>
+
+<property>
+  <name>plugin.includes</name>
+  <value>.*</value>
+  <description>Enable all plugins during unit testing.</description>
+</property>
+
+<property>
+  <name>distributed.search.test.port</name>
+  <value>60000</value>
+  <description>TCP port used during junit testing.</description>
+</property>
+
+<property>
+  <name>storage.data.store.class</name>
+  <value>org.apache.gora.memory.store.MemStore</value>
+  <description>Default in-memory datastore class for temp test data.</description>
+</property>
+
+<property>
+  <name>db.fetch.interval.default</name>
+  <value>1</value>
+  <description>The default number of seconds between re-fetches of a page (30 days).
+  </description>
+</property>
+
+<property>
+  <name>restapi.auth</name>
+  <value>NONE</value>
+  <description>
+    Configures authentication type for communicating with RESTAPI. Valid values are BASIC, DIGEST, SSL and NONE.
+    When no authentication type is defined NONE will be used as default which does not provide security.
+    Use the restapi.auth.username and restapi.auth.password properties to configure
+    your credentials if security is used.
+  </description>
+</property>
+
+<property>
+  <name>restapi.auth.users</name>
+  <value>admin|admin|admin,user|user|user</value>
+  <description>
+    Username, password and role combination for REST API authentication/authorization. restapi.auth property should be set to either BASIC or DIGEST to use this property.
+    Username, password and role should be delimited by pipe character (|) Every user should be separated with comma character (,). i.e. admin|admin|admin,user|user|user.
+    Default is admin|admin|admin,user|user|user
+  </description>
+</property>
+
+<property>
+  <name>restapi.auth.ssl.storepath</name>
+  <value>nutch-ssl.keystore.jks</value>
+  <description>
+    Key store path for jks file. restapi.auth property should be set to SSL to use this property.
+    nutch-ssl.keystore.jks is used for restapi.auth.ssl.storepath as default.
+  </description>
+</property>
+
+<property>
+  <name>restapi.auth.ssl.storepass</name>
+  <value>password</value>
+  <description>
+    Key store path for jks file. restapi.auth property should be set to SSL to use this property.
+    "password" is used for restapi.auth.ssl.storepass as default.
+  </description>
+</property>
+
+<property>
+  <name>restapi.auth.ssl.keypass</name>
+  <value>password</value>
+  <description>
+    Key store path for jks file. restapi.auth property should be set to SSL to use this property.
+    "password" is used for restapi.auth.ssl.keypass as default.
+  </description>
+</property>
+
+</configuration>
