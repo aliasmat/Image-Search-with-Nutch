@@ -1,8 +1,13 @@
-<?xml version="1.0"?>
-<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<?xml version="1.0" ?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl" ?>
 
 <!-- Put site-specific property overrides in this file. -->
 
 <configuration>
+
+    <property>
+        <name>plugin.includes</name>
+        <value>protocol-http|urlfilter-regex|parse-(html|tika|metatags)|urlnormalizer-(pass|regex|basic)|imagesearch</value>
+    </property>
 
 </configuration>
