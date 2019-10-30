@@ -10,5 +10,9 @@
         <value>protocol-http|urlfilter-regex|parse-(html|tika|metatags)|urlnormalizer-(pass|regex|basic)|imagesearch</value>
     </property>
 
-</configuration>
 
+    <property>
+        <name>keywords</name>
+        <value>keyword1,keyword2,keyword3</value>
+    </property>
+</configuration>
